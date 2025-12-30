@@ -786,11 +786,11 @@ class SSHConfiguratorGUI:
             try:
                 status = self.manager.get_service_status()
                 status_text = {
-                    'active': '✅ Активна',
-                    'inactive': '⏸️ Неактивна',
-                    'failed': '❌ Ошибка',
-                    'unknown': '❓ Неизвестно'
-                }.get(status, f'❓ {status}')
+                    'active': 'Активна',
+                    'inactive': 'Неактивна',
+                    'failed': 'Ошибка',
+                    'unknown': 'Неизвестно'
+                }.get(status, f' {status}')
                 
                 self.root.after(0, lambda: self.service_status_var.set(
                     f"Статус: {status_text}"))
